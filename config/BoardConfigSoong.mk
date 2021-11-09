@@ -31,6 +31,8 @@ SOONG_CONFIG_lineageGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
     spoof_first_api_level_32 \
+    camera_needs_client_info_lib \
+    camera_needs_client_info_lib_oplus \
     target_camera_package_name \
     camera_override_format_from_reserved \
     target_trust_usb_control_path \
@@ -39,6 +41,8 @@ SOONG_CONFIG_lineageGlobalVars += \
     uses_miui_camera
 
 # Soong bool variables
+SOONG_CONFIG_lineageGlobalVars_camera_needs_client_info_lib := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB)
+SOONG_CONFIG_lineageGlobalVars_camera_needs_client_info_lib_oplus := $(TARGET_CAMERA_NEEDS_CLIENT_INFO_LIB_OPLUS)
 SOONG_CONFIG_lineageGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
