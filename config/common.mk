@@ -270,6 +270,10 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 include vendor/lineage/config/version.mk
 
+# Cloned app exemption
+ PRODUCT_COPY_FILES += \
+     vendor/lineage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-custom-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-custom-product.xml
+ 
 # Private keys
 -include vendor/ryz-priv/keys/keys.mk
 
