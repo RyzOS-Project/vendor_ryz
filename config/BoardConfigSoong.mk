@@ -75,3 +75,6 @@ ifneq ($(TARGET_INIT_VENDOR_LIB),)
     $(warning TARGET_INIT_VENDOR_LIB is deprecated, please migrate to soong_config_set,libinit,vendor_init_lib)
     $(call soong_config_set,libinit,vendor_init_lib,$(TARGET_INIT_VENDOR_LIB))
 endif
+ifneq ($(TARGET_USES_MIUI_CAMERA),)
+    $(call soong_config_set,camera,uses_miui_camera,$(TARGET_USES_MIUI_CAMERA))
+endif
