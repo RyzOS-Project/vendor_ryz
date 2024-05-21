@@ -331,7 +331,8 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PACKAGES += \
     LMOFreeform \
     LMOFreeformSidebar \
-    GameSpace
+    GameSpace \
+    BtHelper
 
 # DeviceAsWebcamAdd commentMore actions
 ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
