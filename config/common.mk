@@ -346,6 +346,16 @@ PRODUCT_PACKAGES += \
     ColumbusService
 endif
 
+# Enable blur
+TARGET_ENABLE_BLUR ?= trueAdd commentMore actions
+ifeq ($(TARGET_ENABLE_BLUR),true)
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.custom.blur.enable=true
+else
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.custom.blur.enable=false
+endif
+
 # DeviceAsWebcamAdd commentMore actions
 ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
     PRODUCT_PACKAGES += \
