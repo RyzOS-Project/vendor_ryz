@@ -30,6 +30,7 @@ SOONG_CONFIG_NAMESPACES += lineageGlobalVars
 SOONG_CONFIG_lineageGlobalVars += \
     additional_gralloc_10_usage_bits \
     bootloader_message_offset \
+    spoof_first_api_level_32 \
     target_camera_package_name \
     camera_override_format_from_reserved \
     target_trust_usb_control_path \
@@ -38,7 +39,6 @@ SOONG_CONFIG_lineageGlobalVars += \
 
 # Soong bool variables
 SOONG_CONFIG_lineageGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
-
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
@@ -54,6 +54,7 @@ SOONG_CONFIG_lineageGlobalVars_target_trust_usb_control_path := $(TARGET_TRUST_U
 SOONG_CONFIG_lineageGlobalVars_target_trust_usb_control_enable := $(TARGET_TRUST_USB_CONTROL_ENABLE)
 SOONG_CONFIG_lineageGlobalVars_target_trust_usb_control_disable := $(TARGET_TRUST_USB_CONTROL_DISABLE)
 SOONG_CONFIG_lineageGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
+SOONG_CONFIG_lineageGlobalVars_spoof_first_api_level_32 := $(SPOOF_FIRST_API_LEVEL_32)
 
 # Lineage Health HAL
 ifneq ($(TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH),)
