@@ -34,6 +34,7 @@ SOONG_CONFIG_lineageGlobalVars += \
     gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
     gralloc_handle_has_ubwcp_format \
+    spoof_first_api_level_32 \
     target_camera_package_name \
     target_health_charging_control_charging_enabled \
     target_health_charging_control_charging_disabled \
@@ -62,7 +63,7 @@ SOONG_CONFIG_lineageGlobalVars_camera_override_format_from_reserved := $(TARGET_
 SOONG_CONFIG_lineageGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_lineageGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_lineageGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT)
-
+SOONG_CONFIG_lineageGlobalVars_spoof_first_api_level_32 := $(SPOOF_FIRST_API_LEVEL_32)
 # Set default values
 BOOTLOADER_MESSAGE_OFFSET ?= 0
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0
