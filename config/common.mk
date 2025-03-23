@@ -340,6 +340,12 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     OmniJaws
 
+# ColumbusService
+ifneq ($(TARGET_SUPPORTS_QUICK_TAP),false)
+PRODUCT_PACKAGES += \
+    ColumbusService
+endif
+
 # DeviceAsWebcamAdd commentMore actions
 ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
     PRODUCT_PACKAGES += \
