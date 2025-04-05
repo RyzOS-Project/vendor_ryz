@@ -95,7 +95,7 @@ PRODUCT_COPY_FILES += \
 # Audio service timeout
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     audio.service.client_wait_ms=8500
-    
+
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
@@ -377,6 +377,10 @@ ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
         ro.usb.uvc.enabled=true
 endif
 
+BYPASS_CHARGE_SUPPORTED ?= false
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.sys.battery_bypass_supported=$(BYPASS_CHARGE_SUPPORTED)
+    
 ifeq ($(WITH_GMS),true)
 -include vendor/gapps/arm64/arm64-vendor.mk
 endif
