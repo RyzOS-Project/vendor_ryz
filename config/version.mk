@@ -1,13 +1,13 @@
 RYZ_MOD_VERSION := Anxiety
-RYZ_ANDROID = 15.1
+RYZ_VER = 1.0
 RYZ_BUILD_TYPE ?= COMMUNITY
 RYZ_MAINTAINER ?= UNKNOWN
 
 # Internal version
-LINEAGE_VERSION := RyzOS-$(RYZ_MOD_VERSION)-$(RYZ_ANDROID)-$(LINEAGE_BUILD)-$(RYZ_BUILD_TYPE)-$(shell date +%Y%m%d)
+LINEAGE_VERSION := RyzOS-$(RYZ_MOD_VERSION)-V$(RYZ_VER)-$(LINEAGE_BUILD)-$(RYZ_BUILD_TYPE)-$(shell date +%Y%m%d)
 
 # Display version
-LINEAGE_DISPLAY_VERSION := v$(RYZ_ANDROID)-$(shell date +%Y%m%d)
+LINEAGE_DISPLAY_VERSION := v$(RYZ_VER)-$(shell date +%Y%m%d)
 RYZ_VERSION:= $(LINEAGE_VERSION)
 
 # Official Devies
@@ -29,7 +29,7 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.ryz.buildtype=$(RYZ_BUILD_TYPE) \
     ro.ryz.device=$(LINEAGE_BUILD) \
     ro.ryz.display.version=$(LINEAGE_DISPLAY_VERSION) \
-    ro.ryz.android=$(RYZ_ANDROID) \
+    ro.ryz.android=$(RYZ_VER) \
     ro.modversion=$(RYZ_MOD_VERSION) \
     ro.aosp.revision=$(AOSP_REVISION) \
     ro.ryz.maintainer=$(RYZ_MAINTAINER)
