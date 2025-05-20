@@ -368,6 +368,9 @@ PRODUCT_SYSTEM_PROPERTIES += \
     ro.custom.blur.enable=false
 endif
 
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1
+
 # DeviceAsWebcamAdd commentMore actions
 ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
     PRODUCT_PACKAGES += \
@@ -380,7 +383,7 @@ endif
 BYPASS_CHARGE_SUPPORTED ?= false
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.battery_bypass_supported=$(BYPASS_CHARGE_SUPPORTED)
-    
+
 ifeq ($(WITH_GMS),true)
 -include vendor/gapps/arm64/arm64-vendor.mk
 endif
