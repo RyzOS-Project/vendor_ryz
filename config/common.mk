@@ -1,5 +1,6 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
+$(call inherit-product, vendor/addons/ryz.mk)
 
 PRODUCT_BRAND ?= RyzOS
 
@@ -120,7 +121,6 @@ endif
 TARGET_SCREEN_WIDTH ?= 1080
 TARGET_SCREEN_HEIGHT ?= 1920
 
-
 # Build Manifest
 PRODUCT_PACKAGES += \
     build-manifest
@@ -133,7 +133,8 @@ PRODUCT_PACKAGES += \
     Jelly \
     Glimpse \
     Etar \
-    Twelve
+    Twelve \
+    AudioFX
 endif
 
 ifeq ($(PRODUCT_IS_AUTOMOTIVE),)
